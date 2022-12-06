@@ -7,22 +7,22 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: return 0
-			  id: zero
-			  continue-on-error: true
-				run: exit 0
+        id: zero
+        continue-on-error: true
+        run: exit 0
       - name: Error handling
-			  run: echo ${{ steps.error_execution.outcome }}
+        run: echo ${{ steps.error_execution.outcome }}
 
       - name: return 1
-			  id: one
-			  continue-on-error: true
-				run: exit 1
+        id: one
+        continue-on-error: true
+        run: exit 1
       - name: Error handling
-			  run: echo ${{ steps.error_execution.outcome }}
+        run: echo ${{ steps.error_execution.outcome }}
 
       - name: return 2
-			  id: two
-			  continue-on-error: true
-				run: exit 2
+        id: two
+        continue-on-error: true
+        run: exit 2
       - name: Error handling
-			  run: echo ${{ steps.error_execution.outcome }}
+        run: echo ${{ steps.error_execution.outcome }}
